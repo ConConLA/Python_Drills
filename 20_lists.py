@@ -65,7 +65,7 @@ fish: list[str] = [
 # Print the names of fish that start with the letter 'c' 
 
 
-# Create a new fish list that contains fish found in all the lists in the fish list. 
+# Create a new fish list that contains fish names found in all the lists in fish_list. 
 
 
 # Using the colors list, create and print a new list for each item. 

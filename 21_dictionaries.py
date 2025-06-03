@@ -13,6 +13,9 @@
 # A dictionary is a key/value store. 
 # Dictionary keys are unique -- they cannot be duplicated. 
 foods_list = []
+
+
+# This is a dictionary. Each entry has a key and value. 
 food_emoji = {
     'orange': '🍊',
     'apple': '🍎',
@@ -25,12 +28,23 @@ food_emoji = {
     'corn': '🌽'
 }
 
+# Access the values by using their keys. Keys must be valid or you'll get a KeyError
+print(food_emoji['orange'])
+print(food_emoji['corn'])
+# food_emoji['salad']  <---------- KeyError: it doesn't exist!
+
+
+# METHOD: dict.get(key_name)
+# Another way to retrieve values is this method:
+print(food_emoji.get('lemon'))
+print(food_emoji.get('salad'))  # <---------- NO ERROR! It will return None. 
+
 
 # TASK 1: INTRO
 # Create a new dictionary named contact. 
 
 
-# Add the following properties: first_name, last_name, address
+# Add the following key/value pairs: first_name, last_name, address
 # Set their values to your name and address
 
 
