@@ -2,12 +2,25 @@
 # Points: 10
 # ----------------------------
 # DEFINITION: Data structures practice.
-# 
 #
 # *************** You MUST download the required files to practice the drills below. ******************
 # Download: https://gitlab.com/steam-labs-code/workshop-docs/-/blob/main/wordlists/nouns/food.txt?ref_type=heads
-
 # =============================
+from pathlib import Path
+
+
+# Make sure the path to the downloaded text file is correct:
+file_path = 'path/to/food.txt'
+
+
+# Create a new Path and assign it to a variable.
+
+
+# Create a new, emptly list 'foods'. You will need this list to complete the tasks below!
+
+
+# Verify that the path exists.
+# Then open the file in read mode. Read each line and add it to the foods list.
 
 
 # TASK 1: FOODS
@@ -33,6 +46,7 @@
 
 # Use this dictionary for the following tasks.
 doubles = {'consonants': [], 'vowels': []}
+
 
 # Add all words that contain a double consonant to the dictionary. (EX. 'orange')
 
