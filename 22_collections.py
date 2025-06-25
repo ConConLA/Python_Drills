@@ -16,11 +16,8 @@ file_path = 'path/to/food.txt'
 # Create a new Path and assign it to a variable.
 
 
-# Create a new, emptly list 'foods'. You will need this list to complete the tasks below!
-
-
 # Verify that the path exists.
-# Then open the file in read mode. Read each line and add it to the foods list.
+# Then open the file in read mode. Add each line to a new list 'foods'.
 
 
 # TASK 1: FOODS
