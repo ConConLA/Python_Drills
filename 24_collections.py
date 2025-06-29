@@ -15,7 +15,7 @@ models: tuple[tuple] = (
 years: list[int] = []
 colors: list[str] = ['🔴', '🔵', '🟡', '🟢', '⚫','🟤', '⚪', '🟣', '🟠']
 
-cars: list[dict] = [{'make': 'Ford', 'model': 'Mustang'}]
+cars: list[dict] = [{'make': 'BMW', 'model': 'S1'}]
 
 # Add all years betwen 1945 and 1980 to the years list.
 
@@ -52,6 +52,14 @@ cars: list[dict] = [{'make': 'Ford', 'model': 'Mustang'}]
 
 
 # Add a list of 2 random colors to each car.
+
+
+# Print a formatted list for each make, followed by each model, year and color.
+# EX.
+# Toyota:
+#   * Corolla   2001, Red
+#   * Prius     2012, Black
+
 
 
 # =========================== DO NOT EDIT BELOW THIS LINE =============================
