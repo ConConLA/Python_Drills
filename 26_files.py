@@ -36,11 +36,11 @@ p.unlink()
 
 
 # Verify that the path exists.
-# Then open the file in read mode. Create a new list of each line in the in the file.
+# Then open the file in read mode. Create a new list 'rows' of each line in the file.
 
 
 # Create and open a new text file 'colors_random.txt'
-# Write all colors to the file randomized (NOT in alphabetical order).
+# Shuffle and write all colors to the new file (NOT in alphabetical order).
 
 
 # Create and open a new text file 'short_6.txt'
@@ -55,5 +55,16 @@ p.unlink()
 
 
 # Delete 'long_ones.txt' file.
+
+
+# Create a new text file 'data.csv'
+# Write  the string 'color,adjective' as the first line of the file.
+
+
+# Add each color and a random adjective, separated by a comma to the file.
+# EX. orange,happy
+
+
+# Print the contents of 'data.csv' as a formatted table.
 
 
