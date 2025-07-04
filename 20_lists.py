@@ -6,7 +6,7 @@
 # 1. Changeable. 
 # 2. Lists are begin and end with square brackets []
 # 
-# Read: https://realpython.com/python-lists/
+# Read: https://realpython.com/python-lists/. THIS LINK DOES NOT WORK
 # =============================
 
 colors: list = ['red', 'green', 'blue', 'yellow', 'black', 'gray', 'white', 'orange']
@@ -22,28 +22,61 @@ fish: list[str] = [
 # FLATTENING LISTS
 # To flatten a multi-dimensional list, take each item from all lists
 # within and put them into a single list. 
+flat_fish = [item for subfish in fish for item in subfish]
+print(flat_fish)
+
 
 # TASK 1
 # Sort the colors list in alphabetical order. Print it. 
+
+print(sorted(colors))
+
 # Print each list backwards
+print(colors[::-1])
+print(numbers[::-1])
+print([sub[::-1]for sub in fish[::-1]])
+print(flat_fish[::-1])
 
 # Sort the numbers list from greatest to lowest. Print it. 
-
+numbers.sort(reverse=True)
+print(numbers)
 
 # Print every 3rd item from each list
+print(colors[::3])
+for i in range(0,len(colors),3):
+    print(colors[i])
+print(numbers[::3])
+for i in range(0,len(numbers),3):
+    print(numbers[i])
+print(flat_fish[::3])
+
 
 
 # Print every 2nd item of each list, starting at the 2nd item. 
-
+print(colors[1::2])
+print(flat_fish[1::2])
+print(numbers[1::2])
 
 # Print the last 2 items of each list. 
-
-
+print(colors[-2:])
+for color in colors[-2:]:
+    print(color)
+for number in numbers[-2:]:
+    print(number)
+for f in flat_fish[-2:]:
+    print(f)
 # Using the numbers list, create a new list containing only negative numbers. 
+neg = []
+
+for number in numbers:
+    if number <0:
+        neg.append(number)
+print(neg)
 
 
 # Using the numbers list, create a new list containing only positive numbers. 
-
+pos = [num for num in numbers if num>0]
+print(pos)
 
 # Using the colors list, create a new list containing colors that contain ... 
 # - the letter 'a' 
@@ -51,19 +84,39 @@ fish: list[str] = [
 # - 4 or less characters
 
 # Combine colors and numbers into 1 new list. Print the new list. 
+print(colors+numbers)
 
 # TASK 2
 # Print the first item in fish in the fish list.
-
+print(fish[0][0])
 
 # Print each fish capitalized.
+#my notes
+#go through fish list
+#get each item in fish list
+#capitalize it 
+#print it
 
+for item in fish:
+    for i in item:
+        print(i.capitalize())
+    
 
 # Print the names of fish with names longer thant 5 characters.
- 
+for item in fish:
+    for name in item:
+        if len(name) >5:
+            print(name)
 
 # Print the names of fish that start with the letter 'c' 
+#go through fish variable
+#find ones that start with 'c'
+#print them out
+start_c = [name for name in flat_fish if name.startswith('c')]
+for name in start_c:
+    print(name)
 
+    
 
 # Create a new fish list that contains fish names found in all the lists in fish_list. 
 
