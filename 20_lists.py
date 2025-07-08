@@ -1,4 +1,6 @@
 # DT-20 LISTS
+
+
 # Points: 10
 # ----------------------------
 # DEFINITION: An ordered group of objects. 
@@ -22,8 +24,15 @@ fish: list[str] = [
 # FLATTENING LISTS
 # To flatten a multi-dimensional list, take each item from all lists
 # within and put them into a single list. 
-flat_fish = [item for subfish in fish for item in subfish]
-print(flat_fish)
+flat_fish1 = [item for subfish in fish for item in subfish]
+print(flat_fish1)
+flat_fish2 = []
+for item in fish:
+    for fish1 in item:
+        flat_fish2.append(fish1)
+print(flat_fish2)
+
+print (len(fish[0]),len(fish[1]))
 
 
 # TASK 1
@@ -35,7 +44,7 @@ print(sorted(colors))
 print(colors[::-1])
 print(numbers[::-1])
 print([sub[::-1]for sub in fish[::-1]])
-print(flat_fish[::-1])
+print(flat_fish1[::-1])
 
 # Sort the numbers list from greatest to lowest. Print it. 
 numbers.sort(reverse=True)
@@ -48,13 +57,13 @@ for i in range(0,len(colors),3):
 print(numbers[::3])
 for i in range(0,len(numbers),3):
     print(numbers[i])
-print(flat_fish[::3])
+print(flat_fish1[::3])
 
 
 
 # Print every 2nd item of each list, starting at the 2nd item. 
 print(colors[1::2])
-print(flat_fish[1::2])
+print(flat_fish1[1::2])
 print(numbers[1::2])
 
 # Print the last 2 items of each list. 
@@ -63,7 +72,7 @@ for color in colors[-2:]:
     print(color)
 for number in numbers[-2:]:
     print(number)
-for f in flat_fish[-2:]:
+for f in flat_fish1[-2:]:
     print(f)
 # Using the numbers list, create a new list containing only negative numbers. 
 neg = []
@@ -80,8 +89,21 @@ print(pos)
 
 # Using the colors list, create a new list containing colors that contain ... 
 # - the letter 'a' 
+letter_a = []
+for c in colors:
+    if 'a' in c:
+        letter_a.append(c)
+print(letter_a)
+
 # - the letter 'l' 
+letter_l: list = [c for c in colors if 'l' in c]
+print(letter_l)
+
+
+
 # - 4 or less characters
+lessthan_4: list= [c for c in colors if len(c)> 4]
+print(lessthan_4)
 
 # Combine colors and numbers into 1 new list. Print the new list. 
 print(colors+numbers)
@@ -112,17 +134,31 @@ for item in fish:
 #go through fish variable
 #find ones that start with 'c'
 #print them out
-start_c = [name for name in flat_fish if name.startswith('c')]
+start_c = [name for name in flat_fish1 if name.startswith('c')]
 for name in start_c:
     print(name)
 
-    
+
 
 # Create a new fish list that contains fish names found in all the lists in fish_list. 
+same_fish: list = []
+fish1 = fish[0]
+fish2 = fish[1]
 
+for f in fish1:
+    if f in fish2:
+        same_fish.append(f)
+print(same_fish)
 
 # Using the colors list, create and print a new list for each item. 
 # The new list should contain each character of the item. 
 # EX. ['pink'] -> ['p', 'i', 'n', 'k']
+
+for color in colors:
+    letters = []
+    color_name = [color]
+    for char in color:
+        letters.append(char)
+    print(color_name,'->',letters)
 
 
